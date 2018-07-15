@@ -3,6 +3,8 @@ name = "github-api"
 description = "Github v3 API bindings for Rust"
 version = "0.1.0"
 authors = ["joseph.lenton@askattest.com <joseph.lenton@askattest.com>"]
+repository = "https://github.com/JosephLenton/github-api"
+license = "MIT"
 
 [dependencies]
 burgundy = "0.2.3"
