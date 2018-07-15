@@ -1,0 +1,13 @@
+[package]
+name = "github-api"
+description = "Github v3 API bindings for Rust"
+version = "0.1.0"
+authors = ["joseph.lenton@askattest.com <joseph.lenton@askattest.com>"]
+
+[dependencies]
+burgundy = "0.2.3"
+serde = "1.0.70"
+serde_derive = "1.0.70"
+base64 = "0.9.2"
+lazy_static = "1.0.1"
+
