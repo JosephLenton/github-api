@@ -27,7 +27,8 @@ pub struct Github {
 
 impl Github {
     pub fn new() -> Self {
-        let domain = burgundy::Domain::new(&GITHUB_DOMAIN);
+        let mut domain = burgundy::Domain::new(&GITHUB_DOMAIN);
+        domain.header(&"User-Agent", &USER_AGENT.as_str());
 
         Self {
             domain,
@@ -37,7 +38,6 @@ impl Github {
     pub fn new_with_oath(oath_token: &str) -> Self {
         let mut client = Self::new();
         client.domain.header(&"Authorization", &format!("token {}", oath_token));
-        client.domain.header(&"User-Agent", &USER_AGENT.as_str());
         client
     }
 
