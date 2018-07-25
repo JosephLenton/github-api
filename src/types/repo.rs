@@ -4,7 +4,7 @@ use types;
 #[derive(Debug, Deserialize)]
 pub struct Repo {
     pub id: u64,
-    pub owner: types::Owner,
+    pub owner: types::User,
     pub name: String,
     pub full_name: String,
     pub description: Option<String>,

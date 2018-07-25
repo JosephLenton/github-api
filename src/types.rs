@@ -1,7 +1,21 @@
+mod commit;
+mod commit_inner;
 mod contents;
-mod owner;
+mod diff;
+mod file;
 mod repo;
+mod url_and_sha;
+mod user;
+mod user_commit_detail;
+mod verification;
 
+pub use self::commit::Commit;
+pub use self::commit_inner::CommitInner;
 pub use self::contents::Contents;
-pub use self::owner::Owner;
+pub use self::diff::Diff;
+pub use self::file::File;
 pub use self::repo::Repo;
+pub use self::url_and_sha::UrlAndSha;
+pub use self::user::User;
+pub use self::user_commit_detail::UserCommitDetail;
+pub use self::verification::Verification;

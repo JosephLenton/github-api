@@ -1,6 +1,6 @@
 #[allow(missing_docs)]
 #[derive(Debug, Deserialize)]
-pub struct Owner {
+pub struct User {
     pub login: String,
     pub id: u32,
     pub node_id: String,
