@@ -10,5 +10,5 @@ pub struct File {
     pub blob_url: String,
     pub raw_url: String,
     pub contents_url: String,
-    pub patch: String,
+    pub patch: Option<String>,
 }
