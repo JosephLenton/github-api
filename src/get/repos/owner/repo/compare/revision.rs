@@ -7,6 +7,6 @@ pub struct GithubGetReposOwnerRepoCompareRevision {
 
 impl GithubGetReposOwnerRepoCompareRevision {
     pub fn run(self) -> burgundy::Result<types::Diff> {
-        self.path.execute_as_json()
+        self.path.execute_as_json::<(), types::Diff>(None)
     }
 }

@@ -12,6 +12,6 @@ impl GithubGetOrgsOwnerRepos {
     pub fn run(self) -> burgundy::Result<Vec<types::Repo>> {
         self.path
             .query(&"per_page", &NUM_GITHUB_REPOS_PER_PAGE)
-            .execute_as_json::<Vec<types::Repo>>()
+            .execute_as_json::<(), Vec<types::Repo>>(None)
     }
 }

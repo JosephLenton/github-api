@@ -18,7 +18,7 @@ pub struct GithubGetReposOwnerRepoContentsPath {
 
 impl GithubGetReposOwnerRepoContentsPath {
     pub fn run(self) -> burgundy::Result<types::Contents> {
-        self.path.execute_as_json()
+        self.path.execute_as_json::<(), types::Contents>(None)
     }
 
     pub fn run_and_decode(self) -> burgundy::Result<types::Contents> {
