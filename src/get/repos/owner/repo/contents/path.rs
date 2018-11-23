@@ -22,12 +22,17 @@ impl GithubGetReposOwnerRepoContentsPath {
     }
 
     pub fn run_and_decode(self) -> burgundy::Result<types::Contents> {
-        let mut file = self.run()?;
+        let mut file_or_dir = self.run()?;
 
-        let decoded_content = base64::decode_config(&file.content, *GITHUB_BASE64_CONFIG).unwrap();
-        let decoded_content_str = String::from_utf8(decoded_content).unwrap();
-        file.content = decoded_content_str;
+        if let types::Contents::File(mut file) = file_or_dir {
+            let decoded_content =
+                base64::decode_config(&file.content, *GITHUB_BASE64_CONFIG).unwrap();
+            let decoded_content_str = String::from_utf8(decoded_content).unwrap();
+            file.content = decoded_content_str;
 
-        Ok(file)
+            file_or_dir = types::Contents::File(file);
+        }
+
+        Ok(file_or_dir)
     }
 }
