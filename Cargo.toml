@@ -1,7 +1,7 @@
 [package]
 name = "github-api"
 description = "Github v3 API bindings for Rust"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["joseph.lenton@askattest.com <joseph.lenton@askattest.com>"]
 repository = "https://github.com/JosephLenton/github-api"
 license = "MIT"
