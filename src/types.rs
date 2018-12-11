@@ -1,6 +1,8 @@
 mod commit;
 mod commit_inner;
+mod commit_with_files;
 mod contents;
+mod stats;
 mod diff;
 mod file;
 mod repo;
@@ -11,7 +13,9 @@ mod verification;
 
 pub use self::commit::Commit;
 pub use self::commit_inner::CommitInner;
+pub use self::commit_with_files::CommitWithFiles;
 pub use self::contents::Contents;
+pub use self::stats::Stats;
 pub use self::diff::Diff;
 pub use self::file::File;
 pub use self::repo::Repo;
