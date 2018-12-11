@@ -1,6 +1,5 @@
 #![feature(crate_visibility_modifier)]
 #![feature(extern_in_paths)]
-#![feature(non_modrs_mods)]
 
 #[macro_use]
 extern crate serde_derive;
